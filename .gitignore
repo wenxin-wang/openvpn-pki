@@ -1,0 +1,4 @@
+pki/
+secrets/
+vars
+instance/
