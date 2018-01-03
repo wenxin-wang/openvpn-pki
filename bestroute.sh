@@ -20,5 +20,4 @@ fi
 
 bestroutetb=$__INSTANCE__/node_modules/.bin/bestroutetb
 
-tmp=$__INSTANCE__/$$.txt
-$bestroutetb --default-gateway=false -f --route.vpn=us -p openvpn -o bestroute.ovpn
+$bestroutetb --default-gateway=false -f -p openvpn -o $__INSTANCE__/bestroute.ovpn

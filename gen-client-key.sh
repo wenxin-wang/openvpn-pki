@@ -1,19 +1,20 @@
 #!/bin/bash
 
+set -e
+
 trap '>&2 echo Error on line $LINENO' ERR
 
 if [ $# -ne 3 ]; then
-    echo usage: $0 env client email
+    echo usage: $0 dir client email
     exit 1
 fi
 
 __DIR__=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 
-env=$1
+dir=$1
 client=$2
 email=$3
 
-dir=$__DIR__/$env
 vars=$dir/clients/vars
 
 cd $dir/clients
